@@ -1,7 +1,5 @@
 # 8. Список использованных источников
 
-Библиографические описания приведены в формате ГОСТ Р 7.0.5–2008 (Система стандартов по информации, библиотечному и издательскому делу. Библиографическая ссылка. Общие требования и правила составления. — Введ. 2009-01-01. — М. : Стандартинформ, 2008. — 23 с.). Ссылки в тексте оформлены как [N] и расположены по порядку первого упоминания.
-
 1. Apache Software Foundation. Apache Kafka Documentation, 3.x. — URL: https://kafka.apache.org/documentation/ (дата обращения: 23.05.2026).
 2. Hardt D. The OAuth 2.0 Authorization Framework : RFC 6749. — Internet Engineering Task Force (IETF), 2012. — URL: https://www.rfc-editor.org/rfc/rfc6749 (дата обращения: 23.05.2026).
 3. Sakimura N., Bradley J., Jones M. et al. OpenID Connect Core 1.0 incorporating errata set 2. — OpenID Foundation, 2023. — URL: https://openid.net/specs/openid-connect-core-1_0.html (дата обращения: 23.05.2026).
