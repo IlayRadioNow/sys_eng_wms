@@ -1,0 +1,28 @@
+[book]
+title = "WMS-lite: практическая работа"
+description = "Система управления складом для электронной коммерции — облегчённая редакция (WMS-lite)"
+authors = ["Akutin"]
+language = "ru"
+src = "src"
+
+[output.html]
+site-url = "sys_eng_wms"
+default-theme = "rust"
+preferred-dark-theme = "navy"
+git-repository-url = ""
+edit-url-template = ""
+mathjax-support = false
+
+[output.html.fold]
+enable = true
+level = 1
+
+[output.html.search]
+enable = true
+limit-results = 30
+use-boolean-and = true
+boost-title = 2
+boost-hierarchy = 2
+boost-paragraph = 1
+expand = true
+heading-split-level = 3
