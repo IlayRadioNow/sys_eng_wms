@@ -1,7 +1,7 @@
 [book]
 title = "WMS-lite: практическая работа"
 description = "Система управления складом для электронной коммерции — облегчённая редакция (WMS-lite)"
-authors = ["Akutin"]
+authors = ["Efimov", "Radionov"]
 language = "ru"
 src = "src"
 
