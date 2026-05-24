@@ -114,7 +114,7 @@
 | --- | --- | --- |
 | orderId | uuid | ID заказа |
 | externalOrderId | string | ID в OMS/ERP |
-| currentStatus | enum | received / picking / picked / packing / ready_to_ship / shipped / partial |
+| currentStatus | enum | received, picking, picked, partial, supervisor_review, packing, awaiting_delivery_registration, awaiting_label, ready_to_ship, handed_to_carrier, cancelled |
 | trackNumber | string | Трек-номер (если есть) |
 | carrier | string | Курьерская служба |
 | timeline | array | Список событий: ts, event, byUser, details |
@@ -179,4 +179,19 @@
 | userId | uuid | Инициатор перехода (может быть system) |
 | ts | datetime | Время перехода |
 
-**Допустимые переходы статусов.** received → picking → picked → packing → ready_to_ship → shipped. Дополнительно: picking → partial (если недостача); любой → cancelled.
+**Допустимые переходы статусов.** 
+received → picking;
+picking → picked;
+picking → partial;
+partial → supervisor_review;
+supervisor_review → picking;
+supervisor_review → cancelled;
+supervisor_review → awaiting_delivery_registration;
+picked → packing;
+packing → awaiting_delivery_registration;
+awaiting_delivery_registration → awaiting_label;
+awaiting_label → ready_to_ship;
+ready_to_ship → handed_to_carrier;
+любой незавершённый статус → cancelled при получении отмены из OMS/ERP.
+
+Переход partial → supervisor_review обязателен, если заказ не может быть автоматически продолжен из-за недостачи, повреждения товара или расхождения остатков.
